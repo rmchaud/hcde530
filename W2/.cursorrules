@@ -4,11 +4,11 @@ Project context:
 
 Directory structure (keep current):
 ```
-HCDE 530/
+W2/
 ├── .cursorrules
-└── W2/
-    ├── demo_responses.csv
-    └── demo_word_count.py
+├── context.md
+├── demo_responses.csv
+└── demo_word_count.py
 ```
 
 Directory map maintenance:
