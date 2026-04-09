@@ -2,6 +2,20 @@ Project context:
 - This repository is for HCDE 530 coursework.
 - Primary code currently lives in `W2/` and is Python-focused.
 
+Directory structure (keep current):
+```
+HCDE 530/
+├── .cursorrules
+└── W2/
+    ├── demo_responses.csv
+    └── demo_word_count.py
+```
+
+Directory map maintenance:
+- When files or folders are added, removed, or renamed, update the "Directory structure" block in this file in the same change.
+- Keep the tree focused on tracked project files and key folders (exclude temporary/system files such as `.DS_Store`).
+- Before committing, quickly verify the structure block still matches the repository layout.
+
 Working style:
 - Prefer small, targeted edits over broad refactors.
 - Explain changes in plain language and include the file paths touched.
