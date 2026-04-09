@@ -8,7 +8,8 @@ W2/
 ├── .cursorrules
 ├── context.md
 ├── demo_responses.csv
-└── demo_word_count.py
+├── demo_word_count.py
+└── week2.md
 ```
 
 Directory map maintenance:
