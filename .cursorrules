@@ -1,0 +1,28 @@
+Project context:
+- This repository is for HCDE 530 coursework.
+- Primary code currently lives in `W2/` and is Python-focused.
+
+Working style:
+- Prefer small, targeted edits over broad refactors.
+- Explain changes in plain language and include the file paths touched.
+- Before editing, read the relevant file(s) fully.
+
+Python conventions:
+- Follow PEP 8 style and keep functions focused and readable.
+- Use descriptive variable names and add brief comments only when logic is non-obvious.
+- Preserve existing script behavior unless a change is explicitly requested.
+- When adding logic, include basic input/path safety checks where appropriate.
+
+Execution and paths:
+- Assume commands run from repo root unless specified otherwise.
+- For files under `W2/`, prefer `python3 W2/<script>.py` from root or `cd W2` first.
+- Be careful with spaces in paths (for example, `HCDE 530`); quote full paths in shell commands.
+
+Git hygiene:
+- Never initialize or commit from the home directory by accident.
+- Keep `.DS_Store`, editor metadata, and local environment files out of commits when possible.
+- If git history/remote state conflicts, explain safe next steps before destructive options.
+
+Collaboration:
+- If requirements are ambiguous, ask one concise clarifying question.
+- Offer a quick verification step after meaningful changes (for example, run the script or `git status`).
