@@ -1,0 +1,51 @@
+id,name,city,state,country,brewery_type
+5128df48-79fc-4f0f-8b52-d06be54d0cec,(405) Brewing Co,Norman,Oklahoma,United States,micro
+9c5a66c8-cc13-416f-a5d9-0a769c87d318,(512) Brewing Co,Austin,Texas,United States,micro
+34e8c68b-6146-453f-a4b9-1f6cd99a5ada,1 of Us Brewing Company,Mount Pleasant,Wisconsin,United States,micro
+6d14b220-8926-4521-8d19-b98a2d6ec3db,10 Barrel Brewing Co,Bend,Oregon,United States,large
+e2e78bd8-80ff-4a61-a65c-3bfbd9d76ce2,10 Barrel Brewing Co,Bend,Oregon,United States,large
+e432899b-7f58-455f-9c7b-9a6e2130a1e0,10 Barrel Brewing Co,Portland,Oregon,United States,large
+ef970757-fe42-416f-931d-722451f1f59c,10 Barrel Brewing Co,San Diego,California,United States,large
+9f1852da-c312-42da-9a31-097bac81c4c0,10 Barrel Brewing Co - Bend Pub,Bend,Oregon,United States,large
+ea4f30c0-bce6-416b-8904-fab4055a7362,10 Barrel Brewing Co - Boise,Boise,Idaho,United States,large
+1988eb86-f0a2-4674-ba04-02454efa0d31,10 Barrel Brewing Co - Denver,Denver,Colorado,United States,large
+1ecc330f-6275-42a5-b14e-00adbed62752,10 Torr Distilling and Brewing,Reno,Nevada,United States,micro
+7531dbd8-afc9-4b5b-95bc-7ece7f2c0bf3,10-56 Brewing Company,Knox,Indiana,United States,micro
+49eaa1ab-5cee-40cd-a0dc-da14ba2b7dac,1000 Hills Brewing Company,Durban,KwaZulu-Natal,South Africa,brewpub
+5ae467af-66dc-4d7f-8839-44228f89b596,101 North Brewing Company,Petaluma,California,United States,closed
+4ffda196-dd59-44a5-9eeb-5f7fd4b58f5a,105 West Brewing Co,Castle Rock,Colorado,United States,micro
+42aa37d5-8384-4ffe-8c81-7c982eff0384,10K Brewing,Anoka,Minnesota,United States,micro
+232e8f62-9afc-45f5-b4bc-582c26b5c43b,10th District Brewing Company,Abington,Massachusetts,United States,micro
+08f78223-24f8-4b71-b381-ea19a5bd82df,11 Below Brewing Company,Houston,Texas,United States,micro
+58293321-14ae-49d7-9a7b-08436c9e63a6,1188 Brewing Co,John Day,Oregon,United States,brewpub
+e5f3e72a-fee2-4813-82cf-f2e53b439ae6,12 Acres Brewing Company,Killeshin,Laois,Ireland,micro
+d81ff708-b5d2-478f-af6a-6d40f5beb9ac,12 Gates Brewing Company,Williamsville,New York,United States,brewpub
+fb94830f-6196-4f59-9189-c9060b778085,12 West Brewing Company,Gilbert,Arizona,United States,micro
+0faa0fb2-fffa-416d-9eab-46f67477c8ef,12 West Brewing Company - Production Facility,Mesa,Arizona,United States,micro
+e54c2f02-acd6-4172-861d-fcfa54c8701a,122 West Brewing Co,Bellingham,Washington,United States,closed
+d5cb896d-3e99-4e19-9693-5e06ce987e53,127 Brewing,Jackson,Michigan,United States,micro
+06e9fffb-e820-45c9-b107-b52b51013e8f,12Degree Brewing,Louisville,Colorado,United States,brewpub
+50521ef7-f543-4c5d-98b1-0d0ee1a2be01,12welve Eyes Brewing,Saint Paul,Minnesota,United States,micro
+950180bd-29c9-46b3-ad0c-e6f09799ec7f,13 Below Brewery,Cincinnati,Ohio,United States,micro
+45119c56-345b-4adc-b481-c5cf7bfe98c4,13 Stripes Brewery,Taylors,South Carolina,United States,brewpub
+936c3d7e-5d54-4459-b72c-117cdda059b4,13 Virtues Brewing Co,Portland,Oregon,United States,brewpub
+5c53b314-ebab-4e3e-89be-e4139d9318ae,1323 R & D,Raleigh,North Carolina,United States,micro
+4788221a-a03b-458c-9084-4cadd69ade6d,14 Cannons Brewing Company,Westlake Village,California,United States,micro
+b7b68d22-5045-4501-b9bf-ec94946eaffc,14 Lakes Brewery,Crosslake,Minnesota,United States,micro
+4b677b60-fef1-42e2-90ef-dadc1bd7fb06,14er Brewing Company,Denver,Colorado,United States,proprietor
+6c53984f-fac1-4ea7-9c44-44e25897c71a,14th Star Brewing,Saint Albans,Vermont,United States,micro
+85192a9c-58a4-48c3-bd9d-496d09d22aa3,16 Lots Brewing,Mason,Ohio,United States,brewpub
+284b44f8-6ccb-4cd6-8d06-f2ad882a47c3,16 Mile Brewing Co,Georgetown,Delaware,United States,micro
+ee6d39c6-092f-4623-8099-5b8643f70dbe,16 Stone Brewpub,Holland Patent,New York,United States,brewpub
+d35b40b0-a3ff-4878-a6ee-9caa2149b521,1623 Brewing Company,Eldersburg,Maryland,United States,brewpub
+84bd3b3c-bd2d-4e07-bc31-b43a8c8ebf4c,1717 Brewing Co,Des Moines,Iowa,United States,micro
+f41a0c47-ba9b-4547-bfed-fcbefe0fc74b,1718 Ocracoke Brewing,Ocracoke,North Carolina,United States,brewpub
+84d621c4-81a5-44e6-aca7-1566c2e67cc0,1781 Brewing Company,Spotsylvania,Virginia,United States,micro
+896f26a1-d80e-4790-9287-026a86c1799d,180 and Tapped,Coraopolis,Pennsylvania,United States,micro
+31935dfe-87ab-4b3c-b845-1347e78f3d98,1812 Brewery,Cumberland,Maryland,United States,micro
+46839a79-b7bf-4733-b91b-ce116d062a57,1817 Brewery,okolona,Mississippi,United States,micro
+1a1b2165-73ed-40aa-b89b-56794d140f22,1840 Brewing Company,Milwaukee,Wisconsin,United States,micro
+fe6b9893-b93e-43d5-a9f6-3e0c89a3f13c,1850 Brewing Company,Mariposa,California,United States,micro
+b51f3cdf-60ff-4ae1-94a7-76906c7d62eb,18th Street Brewery,Gary,Indiana,United States,micro
+add7f978-942e-4d56-b209-c80837a51d69,18th Street Brewery,Hammond,Indiana,United States,micro
+dbde8235-2b55-4d8b-8b1c-438155abe104,1905 Brewing Company,Assumption,Illinois,United States,micro
