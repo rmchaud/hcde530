@@ -1,0 +1,119 @@
+Loaded 4310 U.S. brewery records from Open Brewery DB.
+
+Required pandas operations (3 used):
+
+1) df.head() -> first 5 rows:
+                                  id                    name           city     state       country brewery_type
+5128df48-79fc-4f0f-8b52-d06be54d0cec        (405) Brewing Co         Norman  Oklahoma United States        micro
+9c5a66c8-cc13-416f-a5d9-0a769c87d318        (512) Brewing Co         Austin     Texas United States        micro
+34e8c68b-6146-453f-a4b9-1f6cd99a5ada 1 of Us Brewing Company Mount Pleasant Wisconsin United States        micro
+6d14b220-8926-4521-8d19-b98a2d6ec3db    10 Barrel Brewing Co           Bend    Oregon United States        large
+e2e78bd8-80ff-4a61-a65c-3bfbd9d76ce2    10 Barrel Brewing Co           Bend    Oregon United States        large
+
+1) df.info() -> data structure summary:
+<class 'pandas.DataFrame'>
+Index: 4310 entries, 0 to 4999
+Data columns (total 6 columns):
+ #   Column        Non-Null Count  Dtype
+---  ------        --------------  -----
+ 0   id            4310 non-null   str  
+ 1   name          4310 non-null   str  
+ 2   city          4310 non-null   str  
+ 3   state         4310 non-null   str  
+ 4   country       4310 non-null   str  
+ 5   brewery_type  4310 non-null   str  
+dtypes: str(6)
+memory usage: 235.7 KB
+
+2) df['brewery_type'].value_counts() -> most common brewery types:
+brewery_type
+micro         2229
+brewpub       1233
+planning       325
+closed         204
+regional       102
+contract        97
+large           52
+proprietor      31
+taproom         22
+nano            13
+
+3) df[df['column'] > value] -> cities with brewery_count > 20:
+     state        city  brewery_count
+California   San Diego             52
+  Colorado      Denver             49
+Washington     Seattle             45
+    Oregon    Portland             39
+  Illinois     Chicago             33
+     Texas      Austin             26
+ Minnesota Minneapolis             24
+     Texas     Houston             22
+
+Q1) Brewery type distribution across states (top 25 state-type rows):
+     state brewery_type  count
+   Alabama        micro     15
+   Alabama       closed      7
+   Alabama      brewpub      5
+   Alabama     planning      2
+   Alabama      taproom      2
+    Alaska        micro     22
+    Alaska      brewpub     10
+    Alaska       closed      3
+    Alaska      taproom      2
+    Alaska     contract      1
+    Alaska     planning      1
+    Alaska     regional      1
+   Arizona        micro     35
+   Arizona      brewpub     16
+   Arizona     contract      3
+   Arizona     planning      3
+   Arizona        large      2
+  Arkansas        micro     12
+  Arkansas      brewpub     11
+  Arkansas     planning      3
+California        micro    262
+California      brewpub    126
+California     planning     35
+California       closed     19
+California     regional     19
+
+Q2) Regional concentration for micro, regional, and brewpub:
+   region brewery_type  count  pct_within_type
+     West      brewpub    391            31.71
+  Midwest      brewpub    389            31.55
+    South      brewpub    234            18.98
+Northeast      brewpub    219            17.76
+     West        micro    737            33.06
+    South        micro    610            27.37
+  Midwest        micro    479            21.49
+Northeast        micro    403            18.08
+     West     regional     40            39.22
+    South     regional     23            22.55
+  Midwest     regional     22            21.57
+Northeast     regional     17            16.67
+
+Q3) City brewery count vs diversity summary (top 20 cities):
+         state         city  brewery_count  unique_types  dominant_type_share
+    California    San Diego             52             7                42.31
+      Colorado       Denver             49             7                61.22
+    Washington      Seattle             45             7                44.44
+        Oregon     Portland             39             7                53.85
+      Illinois      Chicago             33             6                45.45
+         Texas       Austin             26             5                65.38
+     Minnesota  Minneapolis             24             4                70.83
+         Texas      Houston             22             4                63.64
+          Ohio     Columbus             20             6                50.00
+       Indiana Indianapolis             20             3                50.00
+      Michigan Grand Rapids             20             2                90.00
+     Wisconsin    Milwaukee             19             5                52.63
+    New Mexico  Albuquerque             18             2                55.56
+    California  Los Angeles             18             5                55.56
+North Carolina    Asheville             16             4                62.50
+  Pennsylvania   Pittsburgh             16             4                62.50
+        Oregon         Bend             16             6                31.25
+      Kentucky   Louisville             16             3                68.75
+      Missouri  Saint Louis             15             6                46.67
+      New York     Brooklyn             15             5                33.33
+
+Pearson correlation between brewery_count and unique_types across cities: 0.782
+Higher unique_types and lower dominant_type_share indicate a more diverse city mix.
