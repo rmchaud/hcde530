@@ -1,5 +1,7 @@
 # W2 Context: Processing a CSV Data File
 
+For the **competency 2** narrative (code literacy and documentation), see `week2.md`, which ties this folder’s artifacts together. This file is the **long-form companion** to `demo_word_count.py`: it explains flow and UX in prose; the script keeps **decision-level** comments so the two stay aligned.
+
 ## Purpose
 This project demonstrates a clean, beginner-friendly way to process a CSV data file in Python and summarize text responses.
 
@@ -33,10 +35,13 @@ python3 demo_word_count.py
 ## Script Walkthrough (By Section)
 
 ### 1) Load data from CSV
-The script starts by reading `demo_responses.csv` with `csv.DictReader`, so each row is stored as a dictionary with column names as keys.
+The script resolves `demo_responses.csv` next to `demo_word_count.py` using `Path(__file__)`, so it runs correctly from the **repo root** (`python3 W2/demo_word_count.py`) or from inside `W2/`. It reads the file with `csv.DictReader`, so each row is stored as a dictionary with column names as keys.
 
 ```python
-filename = "demo_responses.csv"
+from pathlib import Path
+
+_DATA_DIR = Path(__file__).resolve().parent
+filename = _DATA_DIR / "demo_responses.csv"
 responses = []
 
 with open(filename, newline="", encoding="utf-8") as f:
@@ -48,6 +53,7 @@ with open(filename, newline="", encoding="utf-8") as f:
 Why this matters:
 - It converts raw file rows into structured Python objects.
 - It makes fields like `row["participant_id"]` and `row["response"]` easy to access later.
+- Anchoring the path to the script avoids “file not found” surprises when the shell’s working directory is not `W2/`.
 
 ### 2) Define one focused helper function
 The script defines `count_words()` to keep word counting logic in one place.
@@ -125,8 +131,8 @@ This does not replace qualitative interpretation, but it helps you quickly orien
 ## Common Errors and Quick Fixes
 - **"can't open file ... demo_word_count.py"**
   - You are in the wrong directory. Run from repo root with `python3 W2/demo_word_count.py`, or `cd W2` first.
-- **"No such file or directory: demo_responses.csv"**
-  - The script expects the CSV in the current working directory. Run from `W2`, or update the script to use a full/relative path intentionally.
+- **"No such file or directory: ... demo_responses.csv"**
+  - The script looks for the CSV **next to** `demo_word_count.py`. If you moved or renamed the data file, update the path logic or restore the default layout (`W2/demo_responses.csv` beside `W2/demo_word_count.py`).
 - **Wrong Python command**
   - Use `python3` (not `python`) on systems where Python 2 might still be default.
 

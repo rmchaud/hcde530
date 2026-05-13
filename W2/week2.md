@@ -4,17 +4,25 @@ This note captures observations about **competency 2** (code literacy and docume
 
 ## What competency 2 means to me here
 
-Code literacy is not about writing large programs—it is about **reading and shaping code enough to process data responsibly**, and **documenting** choices so someone else (or future me) can follow the logic. Documentation belongs both **in** the script (where it helps) and **beside** it (when explanations would clutter the code).
+Code literacy is not about memorizing syntax or writing large programs from scratch. For me it is closer to **evaluating and directing**: can I read enough of a script to judge whether it matches the question, spot fragile assumptions, and steer changes safely? **Documentation** is part of that control surface—it records *why* a choice was reasonable so I (or a collaborator, **including an AI tool working inside this repo**) do not have to reverse-engineer intent from behavior alone. Documentation belongs both **in** the script (where it anchors fragile or non-obvious decisions) and **beside** it in `context.md` (where narrative, run instructions, and UX framing belong without cluttering the code).
 
 ## Evidence from this week’s work
 
 | Practice | How it showed up |
 |----------|------------------|
 | Explain code in plain language | `context.md` walks through `demo_word_count.py` by section, in beginner-friendly language, with short snippets only where they clarify the flow. |
-| Useful comments, not comment overload | `demo_word_count.py` uses targeted comments (e.g., data loading, counting helper, key fields) without turning the file into a wall of text. |
+| Useful comments, not comment overload | `demo_word_count.py` ties comments to **decisions**: why `DictReader` (stable field names if column order changes), why `newline=""` with the csv module, why the CSV path is anchored with `Path(__file__)` (matches documented runs from repo root), why word counting lives in one function (single place to change the definition of a “word”), why responses are truncated for display, and why summary stats close the loop as a quick data sanity check. |
 | Document script logic outside the `.py` | `context.md` holds the narrative: purpose, run instructions, walkthrough, UX-relevant interpretation, common errors, optional extensions. |
 | Readability of variables and output | Clear field names from the CSV, aligned table output, and truncated previews so terminal output stays scannable. |
 | Run and validate behavior | Script executed from the correct working directory; output (per-row counts and summary stats) checked against expectations. |
+
+## Connecting the reflection to the scripts (so the competency claim lands)
+
+The table above is only convincing if it points to **concrete** places in the repo:
+
+- **`demo_word_count.py` → “evaluate and direct.”** The module docstring states what must stay true if someone edits the file; section comments explain *why* each block exists (anchored CSV path via `Path(__file__)` so repo-root runs match `context.md`, dictionary-based access, preview length, summary as a sanity check). That is the kind of literacy I mean: you can **audit** the pipeline without running it blind.
+- **`demo_word_count.py` → AI and documentation.** Instructor feedback noted that good documentation helps AI tools stay accurate in a project. Here, `context.md` carries goals and run paths, while in-file comments pin down ambiguous research choices—especially **what counts as a word** (`split()` rule called out in `count_words`). Together they reduce guesswork for any reader generating patches.
+- **`context.md` → bridge between story and code.** It mirrors the same section structure as the script but in prose: purpose, walkthrough, UX link, errors. That file is the explicit evidence that I separated *narrative* from *implementation* on purpose, not only by default template wording.
 
 ## Reflection: what was hardest
 
