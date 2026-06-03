@@ -45,9 +45,6 @@ The easiest way for others to run it **in a browser** is **Google Colab**: Colab
 **Open in Colab** button:
 
 https://colab.research.google.com/github/rmchaud/hcde530/blob/main/W10/survey_theme_report_demo.ipynb
-```markdown
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rmchaud/hcde530/blob/main/W10/survey_theme_report_demo.ipynb)
-```
 
 **What to do in Colab:** open the link → **Runtime → Run all** (or run cells top to bottom). Upload your own CSV if you are not using the sample file included in the repo. The notebook writes a theme report CSV you can download from the file browser.
 
