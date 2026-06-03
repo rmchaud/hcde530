@@ -44,6 +44,7 @@ The easiest way for others to run it **in a browser** is **Google Colab**: Colab
 
 **Open in Colab** button:
 
+https://colab.research.google.com/github/rmchaud/hcde530/blob/main/W10/survey_theme_report_demo.ipynb
 ```markdown
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rmchaud/hcde530/blob/main/W10/survey_theme_report_demo.ipynb)
 ```
