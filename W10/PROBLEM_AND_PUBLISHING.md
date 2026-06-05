@@ -2,13 +2,13 @@
 
 ## Problem space → what this tool does
 
-| Pain (your framing) | How this tool helps |
+| Pain Points | How this tool helps |
 |---------------------|---------------------|
 | Hours hand-coding and grouping open-ended survey answers before synthesis | **Automates a first pass:** turns each detected long-text column into **theme clusters** (TF–IDF + K-means) and a **frequency-ranked table** so you see what repeats *before* deep qualitative coding. |
 | Need feedback that guides the **next design iteration** | Output highlights **dominant themes**, **keywords**, and **representative quotes** per cluster—useful for “what should we change / keep?” conversations, not a substitute for contextual inquiry. |
 | Data comes from **your own** surveys (any CSV) | **Auto-detect** open-ended columns from length/uniqueness heuristics, or **pin exact columns** with `--columns` when you know the headers. |
 
-**Honest limits:** clusters are **statistical**, not your codebook. Short answers, sarcasm, and multilingual text need tighter `--columns` choices or future method upgrades. The value is **compression and triage**, not automated “truth.”
+**Honest limits:** clusters are **statistical**, not the codebook. Short answers, sarcasm, and multilingual text need tighter `--columns` choices or future method upgrades. The value is **compression and triage**, not automated “truth.”
 
 ## Verification checklist (expected behavior)
 
@@ -35,32 +35,5 @@ Re-run with `--random-state 42` (default) for reproducible cluster assignments g
 |--------|----------------------|--------|
 | **Google Colab** | Open a URL → run cells; **first cell** usually `%pip install pandas scikit-learn numpy` once per session | This is the most common “public notebook, low friction” path. See `survey_theme_report_demo.ipynb`. |
 | **Binder** | Open badge URL → waits for build → Jupyter in browser | Needs `requirements.txt` (you have it) and sometimes a `environment.yml`; cold starts can be slow. |
-| **JupyterLite** (WASM) | Pure browser, no server | **scikit-learn is not trivial** in Pyodide; your current stack is easier on **Colab/Binder** than Lite unless you rework to lighter deps. |
+| **JupyterLite** (WASM) | Pure browser, no server | **scikit-learn is not trivial** in Pyodide; the current stack is easier on **Colab/Binder** than Lite unless you rework to lighter deps. |
 | **GitHub / nbviewer** | **Read-only** render of the notebook | Good for **viewing** write-ups; **does not execute** Python. |
-
-So: **“Public Jupyter without installing on my laptop”** usually means **Colab or Binder** (cloud runs the code). That is still “no local install,” but it is not “magic static HTML that trains k-means.”
-
-## “Live public URL” for people to **use** the tool
-
-If you need a link where **non-technical** visitors upload a CSV and get a download **without** notebook cells:
-
-- **Hugging Face Spaces** or **Streamlit Community Cloud**: small web UI wrapping the same Python logic—best fit for “try it in one page.”
-- **Colab**: still excellent for researchers comfortable with “Run all.”
-
-You can offer **both**: Colab notebook for transparency + a tiny Space later for “one-click upload.”
-
-## Suggested GitHub layout when you publish
-
-- `W10/survey_theme_report.py` — CLI + importable `main()` / helpers  
-- `W10/requirements.txt`  
-- `W10/README.md` — install + CLI usage  
-- `W10/survey_theme_report_demo.ipynb` — Colab-oriented demo  
-- `W10/PROBLEM_AND_PUBLISHING.md` — this file  
-
-**Colab badge** (replace `USER` / `REPO` after you push):
-
-```markdown
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USER/REPO/blob/main/W10/survey_theme_report_demo.ipynb)
-```
-
-After the notebook is on `main`, Colab can open that GitHub URL directly.
