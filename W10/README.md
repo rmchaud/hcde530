@@ -46,7 +46,9 @@ The easiest way for others to run it **in a browser** is **Google Colab**: Colab
 
 https://colab.research.google.com/github/rmchaud/hcde530/blob/main/W10/survey_theme_report_demo.ipynb
 
-**What to do in Colab:** open the link → **Runtime → Run all** (or run cells top to bottom). Upload your own CSV if you are not using the sample file included in the repo. The notebook writes a theme report CSV you can download from the file browser.
+**What to do in Colab:** open the link → **Runtime → Run all** (or run cells top to bottom). The link loads **only the notebook** into Google’s cloud; step 2 in the notebook pulls in **`survey_theme_report.py`** and the sample CSV (by cloning your public repo once, unless those files are already next to the notebook). Upload your own survey CSV in step 3 if you like. The notebook writes a theme report you can download from the **Files** sidebar.
+
+**Note for collaborators:** They do **not** need a folder called `W10` on their own computer—that name is only where this project lives **inside my GitHub repo** (`…/hcde530/W10/`). Colab clones the whole repo into a temporary cloud folder; the notebook moves into the subfolder that contains the script automatically. If someone runs the tool **locally**, they can put `survey_theme_report.py`, `requirements.txt`, and their CSV in **any** directory name they like—the path label “W10” does not matter to them.
 
 ---
 
